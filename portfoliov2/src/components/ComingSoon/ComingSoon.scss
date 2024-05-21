@@ -1,0 +1,74 @@
+.App {
+    left: 70%;
+    background-color: #000;
+    color: #fff;
+    /* min-height: 100%; */
+    top: 35%;
+    position: absolute;
+    display: grid;
+    place-items: flex-end;
+    perspective: 1000px;
+    perspective-origin: 50% calc(50% - 190px);
+  }
+  
+  .scene {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 1, -40deg);
+  }
+
+  .scene2{
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 1, 40deg);
+  }
+
+  
+  
+  .banner {
+    display: flex;
+    transform-style: preserve-3d;
+    animation: rotate 24s infinite linear;
+  }
+  
+  @keyframes rotate {
+    to { transform: rotateY(-360deg); }
+  }
+  
+  $width: 50px;
+  .panel {
+    position: absolute;
+    transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(190px); 
+    width: $width;
+    height: 150px;
+    // border: 1px solid white;
+    // background-color: #fff4;
+    overflow: hidden;
+  }
+  
+  .panel::before {
+    position: absolute;
+    left: var(--left);
+    content: "Coming Soon Coming Soon";
+    font-size: 96px;
+    width: max-content;
+    color: hsl(var(--hue), 75%, 75%);
+  }
+  
+  
+  @for $i from 0 to 24 {
+    .panel:nth-child(#{$i + 1}) {
+      --left: #{$width * $i * -1};
+      --hue: #{360 / 24 * $i};
+      --angle: #{360deg / 24 * $i};
+    }
+  }
+  
+  .screen {
+    position: absolute;
+    width: 338px;
+    height: 338px;
+    // background-color: #000a;
+    background-image: linear-gradient(90deg, #000a, #0004, #000a);
+    transform: translate(-50%, -50%);
+  }

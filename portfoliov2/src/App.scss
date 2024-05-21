@@ -1,0 +1,77 @@
+// .App {
+//   text-align: center;
+//   background-color: black;
+//   position: relative;
+//   transform-style: preserve-3d;
+// }
+
+.container{
+  display: grid;
+  max-width: fit-content;
+}
+.starter {
+  font-size: 3rem;
+    position: relative;
+  color: white;
+    z-index: 1000;
+  margin-left: 2rem;
+  bottom:0;
+
+}
+.name{
+  color: white;
+  font-family: monospace;
+  margin-left: 2rem;
+  margin-top: 4%;
+}
+// @media (prefers-reduced-motion: no-preference) {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+@keyframes animateText
+{
+ to {
+    transform: rotateY(360deg);
+  }
+ 
+}
+
+
+.App-logo-vertical {
+  transform-style: preserve-3d;
+  animation: animateTextVertical 10s linear infinite;
+  position: absolute;
+  top:25%;
+  left: 75%;
+  h1 {
+    position:absolute;
+    font-size: 3rem;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    text-transform: capitalize;
+    transform: rotateY(calc(var(--i) * calc(360deg / 24))) translateZ(200px);
+  }
+}
+@keyframes animateTextVertical
+{
+  0% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(15deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(360deg) rotateY(15deg);
+  }
+}
+

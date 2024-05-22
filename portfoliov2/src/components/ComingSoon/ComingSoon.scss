@@ -1,3 +1,4 @@
+
 .App {
     left: 70%;
     background-color: #000;
@@ -8,19 +9,27 @@
     display: grid;
     place-items: flex-end;
     perspective: 1000px;
-    perspective-origin: 50% calc(50% - 190px);
+    perspective-origin: 50% calc(50% - 150px);
   }
   
   .scene {
+    left: 17px;
+    top: -24px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotate3d(1, 1, 1, -40deg);
+    transform: rotate3d(1, 1, 1, 267deg);
   }
 
-  .scene2{
+  .sc2{
+   transform: rotate3d(1, 1, 1, 123deg);
+    display: flex;
+    transform-style: preserve-3d;
+  }
+
+  .banner2{
     position: relative;
     transform-style: preserve-3d;
-    transform: rotate3d(1, 1, 1, 40deg);
+    animation: rotate 24s infinite linear;
   }
 
   
@@ -34,23 +43,30 @@
   @keyframes rotate {
     to { transform: rotateY(-360deg); }
   }
+
+  @keyframes rotate2 {
+    to { transform: rotateY(360deg); }
+  }
   
-  $width: 50px;
+  $width: 40px;
   .panel {
     position: absolute;
-    transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(190px); 
+    transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(150px); 
     width: $width;
-    height: 150px;
+    height: 70px;
+   
     // border: 1px solid white;
     // background-color: #fff4;
     overflow: hidden;
   }
   
   .panel::before {
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.683));
     position: absolute;
+    content: "Coming Soon Coming Soon Coming Soon";
     left: var(--left);
-    content: "Coming Soon Coming Soon";
-    font-size: 96px;
+    content: "Coming Soon Coming Soon Coming Soon";
+    font-size: 50px;
     width: max-content;
     color: hsl(var(--hue), 75%, 75%);
   }
@@ -66,9 +82,11 @@
   
   .screen {
     position: absolute;
-    width: 338px;
-    height: 338px;
+    border-radius: 250px;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
     // background-color: #000a;
     background-image: linear-gradient(90deg, #000a, #0004, #000a);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
   }

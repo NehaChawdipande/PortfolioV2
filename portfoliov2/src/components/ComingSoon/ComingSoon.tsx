@@ -33,6 +33,10 @@ function ComingSoon() {
   <div className="panel"></div>
   <div className="panel"></div>
 </div>
+<div className="screen"></div>
+
+</div>
+
 <div className="sc2">
 <div className="banner2">
  <div className="panel"></div>
@@ -61,7 +65,6 @@ function ComingSoon() {
   <div className="panel"></div>
 </div>
 <div className="screen"></div>
-</div>
 {/* <div className="screen"></div> */}
 </div>
  </>

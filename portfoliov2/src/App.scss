@@ -1,18 +1,26 @@
+@import './utility/variables.scss';
 .container{
   display: grid;
   max-width: 100vw;
-  grid-template-columns: 1fr 1fr;
-  min-height: 40vh;
+  grid-template-columns: 20% 80%;
+  min-height: 80vh;
 }
-
+.splineBlock {
+  .spline-watermark{
+    display: none !important;
+  }
+}
 .actionItems{
-  height: 20vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   button{
     height: 3rem;
+    font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-size: 0.87rem;
     align-items: center;
     background-color: transparent;
     border: 1px solid white;
@@ -22,26 +30,51 @@
 	cursor: pointer;
 	user-select: none;
   }:hover{
+    transition: random($limit: 1);
     background-color: rgb(247, 242, 242);
-    color: hsl(calc(360 / 24 * random(500)), 75%, 75%);;
+    color: #343434;
   }
 }
 .starter {
   margin: 0;
-  font-size: 5rem;
-  max-width: 50vw;
-    position: relative;
+  font-size: 3rem;
+  // max-width: 40vw;
+  position: relative;
   color: white;
-    z-index: 1000;
+  z-index: 1000;
   margin-left: 2rem;
   bottom:0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  @media screen and (min-width: $tablet) {
+    font-size: 4.5rem;
+      //  max-width: 40vw;
+    }
+    @media screen and (min-width: $mobile-md) and (max-width: $tablet) {
+      font-size: 3rem;
+      // max-width: 40vw;
 
+      }
+      @media screen and (max-width: $mobile-sm) {
+          max-width: 100vw;
+      font-size: 3rem;
+
+        }
 }
 .name{
   color: white;
-  font-family: monospace;
-  margin-left: 2rem;
-  margin-top: 4%;
+position: relative;
+  font-family: "NeueMachina";
+    margin-left: 2rem;
+    margin-top: 2rem;
+    /* padding: 1rem; */
+    font-size: 1.5rem;
+    z-index: 2;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 1rem;
+    }
 }
 // @media (prefers-reduced-motion: no-preference) {
 .App-header {
@@ -59,5 +92,8 @@
   color: #61dafb;
 }
 
-
-
+// @font-face {
+//   font-family: "NeueMachina";   /*Can be any text*/
+//   src: local("NeueMachina-Regular"),
+//     url("../src//fonts/NeueMachina-Regular.otf") format("truetype");
+// }

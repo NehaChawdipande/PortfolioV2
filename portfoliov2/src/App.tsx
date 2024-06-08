@@ -4,7 +4,7 @@ function App() {
   return (
     <>
         <div className="App">
-        <iframe className="laptopView" title="laptopView" src='https://my.spline.design/friendskawaiicopy-abd075e427afa171d0e31c83564a72cd/' frameBorder='0' width='100vw' height='100vh' style={{
+        <iframe className="laptopView" title="laptopView" src='https://my.spline.design/portfoliolandscapecopy-9c51313ccd2976e0f1764142768a8f5d/' frameBorder='0' width='100vw' height='100vh' style={{
                  width: "99vw",
                  height: "99vh" }} ></iframe>
 

@@ -8,14 +8,14 @@ function App() {
   return (
     <>
       <div className="App">
-        <div dangerouslySetInnerHTML={embed()} style={{
+        <div className="mobileView" dangerouslySetInnerHTML={embed()} style={{
           width: "99vw",
           height: "99vh"
         }}>
         </div>
-        {/* <iframe className="laptopView" title="laptopView" src='https://my.spline.design/portfoliolandscapecopy-9c51313ccd2976e0f1764142768a8f5d/' frameBorder='0' width='100vw' height='100vh' style={{
+        <iframe className="laptopView" title="laptopView" src='https://my.spline.design/portfoliolandscapecopy-9c51313ccd2976e0f1764142768a8f5d/' frameBorder='0' width='100vw' height='100vh' style={{
                  width: "99vw",
-                 height: "99vh" }} ></iframe> */}
+                 height: "99vh" }} ></iframe>
 
         {/* <ComingSoon /> */}
 

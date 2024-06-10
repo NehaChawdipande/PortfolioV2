@@ -5,7 +5,7 @@ THIS PROJECT IS STILL IN PROGRESS
 I have embedded interative spline scenes into a react application.
 There are 2 spline views, One for mobile views and another for tablet screen sizes and above.
 
-You can visit the link : https://nehachawdipande.github.io to check the latest deployed version of the portfolio
+You can visit the link : https://whining-apple-short.on-fleek.app/ to check the latest deployed version of the portfolio
 
 Here are a few pictures:
 

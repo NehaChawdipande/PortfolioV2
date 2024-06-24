@@ -1,3 +1,4 @@
+## Site is live here: https://spline-portfolio.on-fleek.app/
 This is a basic spline + react.js portfolio.
 
 THIS PROJECT IS STILL IN PROGRESS
